@@ -7,7 +7,7 @@ const http = require("http");
 const { userList, addUser, removeUser, findUser}  = require("./Utils/users");
 
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 
 const publicPath = path.join(__dirname, "../public");
