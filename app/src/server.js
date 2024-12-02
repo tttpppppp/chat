@@ -1,13 +1,16 @@
 const express = require("express");
+require('dotenv').config();
 const path = require("path");
 const Filter = require("bad-words");
 const { createMessage } = require("./Utils/generateMessage");
 const socketio = require("socket.io"); 
+
 const http = require("http");
 const { userList, addUser, removeUser, findUser}  = require("./Utils/users");
 
 const app = express();
-const port = process.env.PORT || 4000;
+
+const port = process.env.PORT || 3000;
 
 
 const publicPath = path.join(__dirname, "../public");
